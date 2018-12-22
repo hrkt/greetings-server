@@ -1,24 +1,39 @@
 package main
 
-import "github.com/gin-gonic/gin"
-
-var (
-  Version  string
-  Revision string
+import (
+	"fmt"
 )
 
-func main() {
-	fmt.Print("Version:" + Version + " Revision:" + Reviison)
+import (
+	"github.com/fvbock/endless"
+	"github.com/gin-gonic/gin"
+)
 
-  // Global middleware
-	r.Use(gin.Logger())
+var (
+	Version  string
+	Revision string
+)
+
+func setupRouter() *gin.Engine {
+	router := gin.Default()
+
+	// Global middleware
+	router.Use(gin.Logger())
 
 	// Routing
-	router := gin.Default()
+	router.StaticFile("/", "./index.html")
+
 	router.GET("/api/greeting", func(ctx *gin.Context) {
 		ctx.JSON(200, gin.H{
 			"message": "hello, world",
 		})
 	})
-	r.Run()
+
+	return router
+}
+
+func main() {
+	fmt.Println("Greetings Server : Version:" + Version + " Revision:" + Revision)
+
+	endless.ListenAndServe(":8080", setupRouter())
 }
