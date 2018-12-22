@@ -33,4 +33,5 @@ $ make test
 ```
 $ make fmt
 ```
-
+# License
+MIT
