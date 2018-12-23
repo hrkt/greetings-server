@@ -1,4 +1,4 @@
-# BUIL
+# BUILD
 FROM golang:1.11.4-alpine as build-stage
 ARG version
 ARG revision
