@@ -32,6 +32,21 @@ $ make test
 
 ```
 $ make fmt
+
+## build container
+
+```
+$ make build-container
+```
+
+## run container
+
+```
+$ make run-container
+```
+
+
+
 ```
 # License
 MIT
