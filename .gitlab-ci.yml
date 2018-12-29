@@ -10,6 +10,7 @@ exec_test:
     script:
         - apk add make
         - apk add git
+        - go get -u github.com/golang/dep/cmd/dep
         - make depinit
         - make bin/greetings-server
         - make test
