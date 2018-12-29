@@ -3,6 +3,11 @@ image: golang:1.11-alpine
 stages:
     - test
 
+before_script:
+  - mkdir -p /go/src/ehw2018.io/greetings-server/
+  - cp -fr ../repo /go/src/ehw2018.io/greetings-server/
+  - cd /go/src/ehw2018.io/greetings-server/repo
+
 exec_test:
     stage: test
     tags:
