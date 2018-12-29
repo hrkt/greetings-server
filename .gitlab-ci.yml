@@ -8,5 +8,5 @@ exec_test:
     tags:
         - test
     script:
-        - apk add build-essential
+        - apk add make
         - make test
