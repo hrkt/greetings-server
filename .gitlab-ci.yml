@@ -5,8 +5,8 @@ stages:
 
 before_script:
   - mkdir -p /go/src/ehw2018.io/greetings-server/
-  - cp -fr ../repo /go/src/ehw2018.io/greetings-server/
-  - cd /go/src/ehw2018.io/greetings-server/repo
+  - cp -fr ../greetings-server /go/src/ehw2018.io
+  - cd /go/src/ehw2018.io/greetings-server
 
 exec_test:
     stage: test
