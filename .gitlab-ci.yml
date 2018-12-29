@@ -9,4 +9,6 @@ exec_test:
         - test
     script:
         - apk add make
+        - make depinit
+        - make bin/greetings-server
         - make test
