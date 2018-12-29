@@ -20,3 +20,4 @@ exec_test:
         - make depensure
         - make bin/greetings-server
         - make test
+        - make build-container
