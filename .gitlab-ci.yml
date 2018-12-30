@@ -17,6 +17,7 @@ exec_test:
         - apk add git
         - apk add build-base
         - apk add sudo
+        - apk add docker
         - go get -u github.com/golang/dep/cmd/dep
         - make depensure
         - make bin/greetings-server
