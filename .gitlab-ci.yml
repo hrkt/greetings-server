@@ -21,3 +21,4 @@ exec_test:
         - make bin/greetings-server
         - make test
         - make build-container
+        - make push-container

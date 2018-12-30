@@ -49,3 +49,6 @@ clean-container:
 
 check-container:
 	curl http://localhost:8080/api/greeting
+
+push-container:
+	sudo docker push $(LABEL) 192.168.3.223:5443/$(LABEL)
