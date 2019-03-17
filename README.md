@@ -2,6 +2,11 @@
 
 https://qiita.com/drafts/a524910b14fc8c05038f
 
+# prerequisites
+
+- dep as dependency manager
+- linux, *nix like platforms - ("endless" shows error message  on windows platform, at this point of moment)
+
 # usage
 
 ## run in dev mode
